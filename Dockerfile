@@ -1,5 +1,6 @@
 FROM ubuntu
 RUN apt update && apt upgrade -y -o Dpkg::Options::="--force-confdef"
+RUN apt install iputils-ping
 COPY ./kubectl /usr/local/bin
 COPY ./kubectl-vsphere /usr/local/bin
 COPY ./docker-credential-vsphere /usr/local/bin
